@@ -36,6 +36,8 @@
     "whatwg-fetch": "^3.6.2"
   },
   "dependencies": {
-    "regenerator-runtime": "^0.14.0"
+    "regenerator-runtime": "^0.14.0",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1"
   }
 }
