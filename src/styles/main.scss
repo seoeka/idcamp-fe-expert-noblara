@@ -1,5 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Signika:wght@300..700&display=swap');
+@import 'root';
 
-img {
-  display: block;
+*, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  color: white;
 }
+
+a {
+  text-decoration: none;
+}
+
+#logo {
+  height: 40px;
+}
+
+#hamburger {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  transition-duration: 300;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 108px;
+  background: rgba(34, 34, 34, 0);
+}
+
+.nav-list {
+  display: inline-flex;
+  gap: 20px;
+}
+
+.nav-list > a {
+  background-color: $primary;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+

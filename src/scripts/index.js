@@ -4,5 +4,6 @@ import '../styles/responsive.scss';
 
 import main from './view/main';
 import './component/rest-list';
+import './component/navigation-bar';
 
 document.addEventListener("DOMContentLoaded", main);
