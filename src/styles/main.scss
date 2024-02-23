@@ -84,7 +84,34 @@ nav {
   width: 530px;
 }
 
-main {
-  min-height: 200vh;
+.rest-head {
+  display: flex;
+  position: relative;
+  color: black;
 }
 
+.rest-head > h2,
+.rest-head > p {
+  position: absolute;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot-co {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  background-color: $secondary;
+  padding: 20px 0 30px 0;
+}
+
+.foot-co > img {
+  height: 50px;
+  width: 200px;
+}

@@ -6,5 +6,6 @@ import main from './view/main';
 import './component/rest-list';
 import './component/navigation-bar';
 import './component/hero-element';
+import './component/footer-content';
 
 document.addEventListener("DOMContentLoaded", main);
