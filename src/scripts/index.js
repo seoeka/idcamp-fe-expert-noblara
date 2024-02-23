@@ -5,5 +5,6 @@ import '../styles/responsive.scss';
 import main from './view/main';
 import './component/rest-list';
 import './component/navigation-bar';
+import './component/hero-element';
 
 document.addEventListener("DOMContentLoaded", main);

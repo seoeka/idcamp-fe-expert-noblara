@@ -3,6 +3,7 @@ import logo from '../../public/images/logo.png';
 class NavigationBar extends HTMLElement {
   connectedCallback() {
     this.render();
+    this.scrolled();
   }
 
   render() {
@@ -25,6 +26,17 @@ class NavigationBar extends HTMLElement {
             </div>
         </nav>
         `;
+  }
+  scrolled() {
+    const navbar = this.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY > 80;
+      navbar.classList.toggle('scrolled', scrolled);
+
+      navbar.style.backgroundColor = scrolled
+        ? "rgba(34, 34, 34, 1)"
+        : "rgba(34, 34, 34, 0)";
+    });
   }
 }
 

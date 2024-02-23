@@ -19,8 +19,9 @@ a {
   display: none;
 }
 
-.nav {
+nav {
   display: flex;
+  width: 100%;
   position: fixed;
   z-index: 10;
   transition-duration: 300;
@@ -28,10 +29,11 @@ a {
 
 .nav-content {
   display: flex;
-  justify-content: space-between;
+  width: inherit;
+  margin: auto;
   align-items: center;
   padding: 20px 108px;
-  background: rgba(34, 34, 34, 0);
+  justify-content: space-between;
 }
 
 .nav-list {
@@ -41,8 +43,48 @@ a {
 
 .nav-list > a {
   background-color: $primary;
-  padding: 5px 15px;
+  padding: 10px 20px;
   border-radius: 5px;
 }
 
+.hero-element {
+  display: flex;
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+}
+
+.darker-img {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+}
+
+#hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-caption {
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 0 108px;
+  margin: auto;
+  font-size: 24px; 
+  font-weight: 600; 
+  word-wrap: break-word;
+  margin-bottom: 50px;
+  justify-content: end;
+}
+
+.caption {
+  width: 530px;
+}
+
+main {
+  min-height: 200vh;
+}
 
