@@ -19,8 +19,13 @@ a {
   display: none;
 }
 
-nav, .nav-content {
+nav, .nav-content, main,
+.hero-element, .hero-caption, .rest-img > p {
   display: flex;
+}
+
+.hero-caption, .rest-head, .rest-img > p, main {
+  flex-direction: column;
 }
 
 nav {
@@ -55,7 +60,6 @@ nav {
 }
 
 .hero-element {
-  display: flex;
   position: relative;
   height: 420px;
   overflow: hidden;
@@ -75,8 +79,6 @@ nav {
 
 .hero-caption {
   inset: 0;
-  display: flex;
-  flex-direction: column;
   position: absolute;
   padding: 0 108px;
   margin: auto;
@@ -93,7 +95,6 @@ nav {
 
 .rest-head {
   display: flex;
-  flex-direction: column;
   align-items: center;
   position: relative;
   padding: 40px 108px;
@@ -110,8 +111,14 @@ nav {
 
 .rest-list {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 20px;
   padding: 0 108px;
-  width: 340px;
+  margin-bottom: 40px;
+}
+
+.rest-item {
+  max-width: 340px;
 }
 
 .rest-img, .rest-img > img {
@@ -139,8 +146,6 @@ nav {
 
 .rest-img > p {
   inset: 0;
-  display: flex;
-  flex-direction: column;
   position: absolute;
   padding: 4px 20px;
   background-color: $primary;
@@ -167,8 +172,21 @@ nav {
   margin-bottom: 10px;
 }
 
+.title > h3> a{
+  color: #fff5f1e7;
+  transition: color 0.3s ease;
+  display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  overflow: hidden;
+} 
+
+.title > h3 > a:hover{
+  color: white;
+} 
+
 .rating, .desc, .rest-head,
-.rest-img > p {
+.rest-img > p, .caption {
   cursor: default;
 }
 
@@ -181,11 +199,6 @@ nav {
   display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
 }
 
 .foot-co {
@@ -203,4 +216,8 @@ main {
 .foot-co > img {
   height: 50px;
   width: 200px;
+}
+
+.foot-co > p > a:hover{
+  color: gold;
 }

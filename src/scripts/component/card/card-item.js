@@ -12,7 +12,7 @@ class CardItem extends HTMLElement {
             </div>
             <div class="rest-cont">
               <div class="title">
-                <h3><a href="#">${this.getAttribute("name")}</a></h3>
+                <h3 ><a href="#">${this.getAttribute("name")}</a></h3>
                 <div class="rating" title="Rating ${this.getAttribute("name")}">
                   <p>&#9733; ${this.getAttribute("rate")}</p>
                 </div>
