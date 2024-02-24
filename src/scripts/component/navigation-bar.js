@@ -10,12 +10,13 @@ class NavigationBar extends HTMLElement {
   render() {
     this.innerHTML = `
         <nav>
+            <a href="#main-content" aria-label="Skip ke konten utama" class="skip-link">Skip ke Konten Utama</a>     
             <div class="nav-content">
                 <div class="nav-logo">
                     <img src="${logo}" alt="Logo Noblara" id="logo">
                 </div>
                 <div class="nav-menu">
-                    <button id="hamburger" aria-label="Buka Menu" title="Menu Navigasi">☰</button>
+                    <button id="hamburger" aria-label="Buka Menu" title="Menu Navigasi" alt="Menu Navigasi">☰</button>
                     <div class="nav-list" id="side-menu">
                         <a href="#/" class="nav-item">Home</a>
                         <a href="#" class="nav-item">Favorite</a>

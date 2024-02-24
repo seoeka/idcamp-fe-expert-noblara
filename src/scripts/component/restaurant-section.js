@@ -25,7 +25,7 @@ class RestaurantSection extends HTMLElement {
             <h2>Rumah Makan Kami</h2>
             <p>Nikmati sajian eksklusif Nusantara modern di seluruh Indonesia</p>
         </section>
-        <section class="rest-list">
+        <section class="rest-list" id="main-content">
             ${CardData}
         </section>
         `;

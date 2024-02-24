@@ -3,7 +3,6 @@ const main = () => {
     const navList = document.querySelector(".nav-list");
     const navItems = document.querySelectorAll(".nav-item");
     const mainElement = document.querySelector("main");
-    const skipLink = document.querySelector(".skip-link");
   
     document.addEventListener("keydown", (event) => {
         if (event.key === "Tab" && navList.classList.contains("open")) {
@@ -15,9 +14,9 @@ const main = () => {
     });
     
     const toggleNavList = () => {
-        navList.classList.toggle("open");
-        btHam.innerHTML = navList.classList.contains("open") ? "X" : "☰";
-        btHam.ariaLabel = navList.classList.contains("open") ? "Tutup menu navigasi" : "Buka menu navigasi";
+        navList.classList.toggle("show");
+        btHam.innerHTML = navList.classList.contains("show") ? "X" : "☰";
+        btHam.ariaLabel = navList.classList.contains("show") ? "Tutup menu navigasi" : "Buka menu navigasi";
         mainElement.classList.toggle("blurred");
     };
 
@@ -27,7 +26,7 @@ const main = () => {
     });
 
     const closeNavList = () => {
-        navList.classList.remove("open");
+        navList.classList.remove("show");
         mainElement.classList.remove("blurred");
         btHam.innerHTML = "☰";
         btHam.ariaLabel = "Buka menu navigasi";

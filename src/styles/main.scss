@@ -12,7 +12,35 @@ a {
 }
 
 #logo {
-  height: 40px;
+  height: 44px;
+}
+
+.hero-caption, .rest-img > p, .rest-img {
+  display: flex;
+}
+
+.skip-link {
+  display: flex;
+  position: absolute;
+  top: 25px;
+  left: -100vh;
+  background-color: $primary;
+  border-radius: 5px;
+  height: 44px;
+  padding: 0 20px;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+
+  &:focus{
+    left: 10px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 main.blurred{
@@ -21,7 +49,6 @@ main.blurred{
 }
 
 #hamburger {
-  display: block;
   position: relative;
   font-size: 24px;
   min-width: 44px;
@@ -33,36 +60,24 @@ main.blurred{
   z-index: 99;
 }
 
-nav, .nav-content, main,
-.hero-element, .hero-caption, .rest-img > p {
-  display: flex;
-}
-
-.hero-caption, .rest-head, .rest-img > p, main {
+.hero-caption, 
+.rest-img > p {
   flex-direction: column;
 }
 
 nav {
-  width: 100%;
+  display: flex;
   position: fixed;
+  width: 100%;
   z-index: 10;
-  transition-duration: 300;
-}
-
-.nav-content {
-  width: inherit;
-  margin: auto;
-  align-items: center;
-  padding: 20px 15px;
-  justify-content: space-between;
-}
-
-.nav-list > a {
-  padding: 11px 20px;
-  text-align: center;
-  border-radius: 5px;
-  background-color: $primary;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  .nav-content {
+    display: flex;
+    width: inherit;
+    align-items: center;
+    padding: 20px 15px;
+    justify-content: space-between;
+  }
 }
 
 .nav-list{
@@ -88,18 +103,26 @@ nav {
           transform: translate(0, 0);
         }
       }
+      a {
+        padding: 11px 20px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: $primary;
+        transition: background-color 0.3s ease;
+      
+        &:hover {
+          background-color: lighten($primary, 10%);
+        }
+      }      
 }
 
-.nav-list.open{
+.nav-list.show{
   display: flex;
   position: absolute;
 }
 
-.nav-list > a:hover {
-  background-color: lighten($primary, 10%);
-}
-
 .hero-element {
+  display: flex;
   position: relative;
   height: 420px;
   overflow: hidden;
@@ -120,10 +143,10 @@ nav {
 .hero-caption {
   inset: 0;
   position: absolute;
-  padding: 0 15px;
-  margin: auto;
   font-size: 24px; 
   font-weight: 600; 
+  padding: 0 15px;
+  margin: auto;
   word-wrap: break-word;
   justify-content: center;
   align-items: center;
@@ -142,19 +165,17 @@ restaurant-section {
 
 .rest-head {
   display: flex;
+  flex-direction: column;
   align-items: center;
   position: relative;
   padding: 40px 15px;
   text-align: center;
-}
-
-.rest-head > h2,
-.rest-head > p {
-  color: black;
-}
-
-.rest-head > p {
-  font-size: large;
+  h2, p {
+    color: black;
+  }
+  p {
+    font-size: large;
+  }
 }
 
 .rest-list {
@@ -175,34 +196,30 @@ restaurant-section {
 }
 
 .rest-img {
-  display: flex;
   position: relative;
   overflow: hidden;
-}
-
-.rest-img > img {
-  object-fit: cover;
-  height: 180px;
-  width: 360px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.rest-img > img:hover {
-  transform: scale(1.1);
-  filter: brightness(110%) contrast(110%);
-}
-
-.rest-img > p {
-  inset: 0;
-  position: absolute;
-  padding: 4px 20px;
-  background-color: $primary;
-  width: fit-content;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  justify-content: start;
-  margin-top: 20px;
-  height: fit-content;
+  img {
+    object-fit: cover;
+    height: 180px;
+    width: 360px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+      filter: brightness(110%) contrast(110%);
+    }
+  }
+  p {
+    inset: 0;
+    position: absolute;
+    padding: 4px 20px;
+    height: fit-content;
+    width: fit-content;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    justify-content: start;
+    margin-top: 20px;
+    background-color: $primary;
+  }
 }
 
 .rest-cont {
@@ -210,37 +227,32 @@ restaurant-section {
   padding: 15px 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 10px;
+    h3 {
+      a{
+        color: #fff5f1e7;
+        transition: color 0.3s ease;
+        display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-width: 100%;
+        &:hover{
+          color: white;
+        }
+      } 
+    }
+  }
 }
-
-.rest-cont > .title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.title > h3> a{
-  color: #fff5f1e7;
-  transition: color 0.3s ease;
-  display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-  overflow: hidden;
-  max-width: 100%;
-} 
-
-.title > h3 > a:hover{
-  color: white;
-} 
 
 .rating, .desc, .rest-head,
 .rest-img > p, .caption {
   cursor: default;
-}
-
-.rating {
-  min-width: 42px;
 }
 
 .rest-cont > p {
@@ -264,13 +276,11 @@ restaurant-section {
   background-color: $secondary;
   padding: 20px 0 30px 0;
   gap: 10px;
-}
-
-.foot-co > img {
-  height: 50px;
-  width: 200px;
-}
-
-.foot-co > p > a:hover{
-  color: gold;
+  img {
+    height: 50px;
+    width: 200px;
+  }
+  p > a:hover{
+    color: gold;
+  }
 }
