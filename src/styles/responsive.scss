@@ -5,7 +5,22 @@
 }
 
 @media (min-width: 768px) { 
-
+    #hamburger {
+        display: none;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        height: 100%;
+        width: auto;
+        margin: 0;
+        position: relative;
+        top: 0;
+        right: 0;
+        animation: none;
+        background-color: transparent;
+    }
 }
 
 @media (min-width: 992px) { 

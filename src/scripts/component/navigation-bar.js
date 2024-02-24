@@ -4,6 +4,7 @@ class NavigationBar extends HTMLElement {
   connectedCallback() {
     this.render();
     this.scrolled();
+    this.sidemenu();
   }
 
   render() {
@@ -14,10 +15,8 @@ class NavigationBar extends HTMLElement {
                     <img src="${logo}" alt="Logo Noblara" id="logo">
                 </div>
                 <div class="nav-menu">
-                    <button id="hamburger" aria-label="Buka Menu" title="Menu Navigasi">
-                        
-                    </button>
-                    <div class="nav-list">
+                    <button id="hamburger" aria-label="Buka Menu" title="Menu Navigasi">☰</button>
+                    <div class="nav-list" id="side-menu">
                         <a href="#/" class="nav-item">Home</a>
                         <a href="#" class="nav-item">Favorite</a>
                         <a href="https://github.com/seoeka" class="nav-item" target="_blank" rel="noopener noreferrer">About Us</a>
