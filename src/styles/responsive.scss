@@ -25,12 +25,10 @@
 
 @media (min-width: 992px) { 
     .rest-list {
+        padding: 0 30px;  
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    .hero-caption, .rest-list {
-        padding: 0 30px;  
-    }
-    .nav-content {
+    nav .nav-content {
         padding: 20px 30px;
     }
     .rest-head {
@@ -39,16 +37,11 @@
 }
 
 @media (min-width: 1200px) { 
-    #hero {
-        min-width: 1000px;
-    }
-    .hero-caption, .rest-list {
-        padding: 0 100px;  
-    }
-    .nav-content {
+    nav .nav-content {
         padding: 20px 100px;
     }
-    .rest-head {
-        padding: 40px 100px;
+    .rest-list {
+        display: grid;
+        padding: 0 100px;  
     }
 }
