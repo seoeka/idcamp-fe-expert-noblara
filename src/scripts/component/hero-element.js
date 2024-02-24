@@ -3,8 +3,17 @@ import hero from "../../public/images/heros/hero-image_2.jpg";
 class HeroElement extends HTMLElement {
   connectedCallback() {
     this.render();
+    this.handleCaption();
   }
 
+  handleCaption() {
+    const caption = this.querySelector('.caption');
+    const windowWidth = window.innerWidth;
+    if (windowWidth < 576 && caption) {
+      caption.innerHTML = caption.innerHTML.replace('<br>', ' ');
+    }
+  }
+  
   render() {
     this.innerHTML = `
             <section class="hero-element">

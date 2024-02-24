@@ -1,0 +1,39 @@
+@media (min-width: 576px) { 
+    .rest-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) { 
+
+}
+
+@media (min-width: 992px) { 
+    .rest-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .hero-caption, .rest-list {
+        padding: 0 30px;  
+    }
+    .nav-content {
+        padding: 20px 30px;
+    }
+    .rest-head {
+        padding: 40px 30px;
+    }
+}
+
+@media (min-width: 1200px) { 
+    #hero {
+        min-width: 1000px;
+    }
+    .hero-caption, .rest-list {
+        padding: 0 100px;  
+    }
+    .nav-content {
+        padding: 20px 100px;
+    }
+    .rest-head {
+        padding: 40px 100px;
+    }
+}

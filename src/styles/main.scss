@@ -39,7 +39,7 @@ nav {
   width: inherit;
   margin: auto;
   align-items: center;
-  padding: 20px 108px;
+  padding: 20px 15px;
   justify-content: space-between;
 }
 
@@ -50,7 +50,7 @@ nav {
 
 .nav-list > a {
   background-color: $primary;
-  padding: 10px 20px;
+  padding: 11px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
@@ -80,24 +80,32 @@ nav {
 .hero-caption {
   inset: 0;
   position: absolute;
-  padding: 0 108px;
+  padding: 0 15px;
   margin: auto;
   font-size: 24px; 
   font-weight: 600; 
   word-wrap: break-word;
-  margin-bottom: 50px;
-  justify-content: end;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.caption {
-  width: 530px;
+.hero-caption .caption {
+  white-space: normal;
+}
+
+restaurant-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rest-head {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 40px 108px;
+  padding: 40px 15px;
+  text-align: center;
 }
 
 .rest-head > h2,
@@ -111,14 +119,14 @@ nav {
 
 .rest-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 28px 20px;
-  padding: 0 108px;
+  padding: 0 15px;
   margin-bottom: 40px;
 }
 
 .rest-item {
-  max-width: 340px;
+  max-width: 360px;
 }
 
 .rest-img, .rest-img > img {
@@ -135,7 +143,7 @@ nav {
 .rest-img > img {
   object-fit: cover;
   height: 180px;
-  width: 340px;
+  width: 360px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -179,6 +187,7 @@ nav {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
   overflow: hidden;
+  max-width: 100%;
 } 
 
 .title > h3 > a:hover{
@@ -188,6 +197,10 @@ nav {
 .rating, .desc, .rest-head,
 .rest-img > p, .caption {
   cursor: default;
+}
+
+.rating {
+  min-width: 42px;
 }
 
 .rest-cont > p {
