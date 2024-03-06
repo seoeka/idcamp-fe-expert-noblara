@@ -7,8 +7,8 @@ class RestaurantSection extends HTMLElement {
   }
 
   render() {
-    const restaurants = data.restaurants;
-    let CardData = "";
+    const { restaurants } = data;
+    let CardData = '';
     restaurants.forEach((restaurant) => {
       CardData += `
       <card-item
@@ -32,4 +32,4 @@ class RestaurantSection extends HTMLElement {
   }
 }
 
-customElements.define("restaurant-section", RestaurantSection);
+customElements.define('restaurant-section', RestaurantSection);

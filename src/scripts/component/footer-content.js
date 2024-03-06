@@ -15,4 +15,4 @@ class FooterContent extends HTMLElement {
   }
 }
 
-customElements.define("foot-co", FooterContent);
+customElements.define('foot-co', FooterContent);

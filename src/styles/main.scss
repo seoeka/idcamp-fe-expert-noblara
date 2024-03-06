@@ -189,8 +189,12 @@ restaurant-section {
 
 .rest-item {
   max-width: 360px;
+  transition: transform ease 0.3s, filter ease 0.3s;
+  &:hover {
+    transform: translateY(-10px); 
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.3));
+  }
 }
-
 .rest-img, .rest-img > img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;

@@ -12,4 +12,4 @@ import './component/hero-element';
 import './component/restaurant-section';
 import './component/footer-content';
 
-document.addEventListener("DOMContentLoaded", main);
+document.addEventListener('DOMContentLoaded', main);

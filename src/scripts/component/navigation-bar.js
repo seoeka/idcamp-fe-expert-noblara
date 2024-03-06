@@ -27,6 +27,7 @@ class NavigationBar extends HTMLElement {
         </nav>
         `;
   }
+
   scrolled() {
     const navbar = this.querySelector('nav');
     window.addEventListener('scroll', () => {
@@ -34,10 +35,10 @@ class NavigationBar extends HTMLElement {
       navbar.classList.toggle('scrolled', scrolled);
 
       navbar.style.backgroundColor = scrolled
-        ? "rgba(34, 34, 34, 1)"
-        : "rgba(34, 34, 34, 0)";
+        ? 'rgba(34, 34, 34, 1)'
+        : 'rgba(34, 34, 34, 0)';
     });
   }
 }
 
-customElements.define("nav-bar", NavigationBar);
+customElements.define('nav-bar', NavigationBar);

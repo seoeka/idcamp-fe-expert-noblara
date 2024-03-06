@@ -1,4 +1,4 @@
-import hero from "../../public/images/heros/hero-image_2.jpg";
+import hero from '../../public/images/heros/hero-image_2.jpg';
 
 class HeroElement extends HTMLElement {
   connectedCallback() {
@@ -13,7 +13,7 @@ class HeroElement extends HTMLElement {
       caption.innerHTML = caption.innerHTML.replace('<br>', ' ');
     }
   }
-  
+
   render() {
     this.innerHTML = `
             <section class="hero-element">
@@ -27,4 +27,4 @@ class HeroElement extends HTMLElement {
   }
 }
 
-customElements.define("hero-element", HeroElement);
+customElements.define('hero-element', HeroElement);

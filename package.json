@@ -11,7 +11,7 @@
     "test:watch": "jest --watchAll"
   },
   "keywords": [],
-  "author": "your_name <your.email@domain.com>",
+  "author": "seoeka <21106050023@student.uin-suka.ac.id>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.22.9",
@@ -20,9 +20,11 @@
     "@types/jest": "^29.5.3",
     "babel-jest": "^29.6.1",
     "babel-loader": "^8.2.5",
-    "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
     "fake-indexeddb": "^4.0.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
@@ -33,12 +35,13 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
-    "webpack-merge": "^5.9.0",
     "whatwg-fetch": "^3.6.2"
   },
   "dependencies": {
-    "regenerator-runtime": "^0.14.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "regenerator-runtime": "^0.14.1",
     "sass": "^1.71.1",
-    "sass-loader": "^14.1.1"
+    "sass-loader": "^14.1.1",
+    "webpack-merge": "^5.10.0"
   }
 }
