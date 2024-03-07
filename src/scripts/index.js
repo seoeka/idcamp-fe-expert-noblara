@@ -4,7 +4,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
 import '../styles/responsive.scss';
 
-import main from './views/main';
+import App from './views/app';
 
 // Components
 import './component/navigation-bar';
@@ -12,4 +12,12 @@ import './component/hero-element';
 import './component/restaurant-section';
 import './component/footer-content';
 
-document.addEventListener('DOMContentLoaded', main);
+const app = new App({
+  button: document.querySelector('#hamburger'),
+  drawer: document.querySelector('.nav-list'),
+  content: document.querySelector('main'),
+});
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});

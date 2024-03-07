@@ -22,6 +22,8 @@ const Home = {
   },
 
   async afterRender() {
+    this.handleCaption();
+
     const restaurantContainer = document.querySelector('.rest-list');
     const loadingElement = document.querySelector('.loader-wrapper');
 
@@ -32,6 +34,15 @@ const Home = {
       restaurantContainer.innerHTML += createRestaurantItem(restaurant);
     });
   },
+
+  handleCaption() {
+    const caption = this.querySelector('.caption');
+    const windowWidth = window.innerWidth;
+    if (windowWidth < 576 && caption) {
+      caption.innerHTML = caption.innerHTML.replace('<br>', ' ');
+    }
+  },
+
 };
 
 export default Home;

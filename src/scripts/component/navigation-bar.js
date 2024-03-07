@@ -4,7 +4,6 @@ class NavigationBar extends HTMLElement {
   connectedCallback() {
     this.render();
     this.scrolled();
-    this.sidemenu();
   }
 
   render() {
