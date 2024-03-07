@@ -5,9 +5,8 @@ class LoadingCircle extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div class="loader-wrapper">
-          <div class="lds-roller">
-              <div></div>
+      <div class="loader-wrapper display-none">
+          <div class="loader">
               <div></div>
               <div></div>
               <div></div>

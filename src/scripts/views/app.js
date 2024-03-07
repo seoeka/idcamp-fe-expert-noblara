@@ -33,29 +33,17 @@ class App {
       btHam.ariaLabel = 'Buka menu navigasi';
     };
 
+    navList.addEventListener('click', closeNavList);
+    mainElement.addEventListener('click', closeNavList);
+
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Tab' && navList.classList.contains('open')) {
+      if (event.key === 'Tab' && navList.classList.contains('show')) {
         const lastNavItem = navItems[navItems.length - 1];
         if (lastNavItem === event.target) {
           closeNavList();
         }
       }
     });
-
-    const toggleNavList = () => {
-      navList.classList.toggle('show');
-      btHam.innerHTML = navList.classList.contains('show') ? 'X' : '☰';
-      btHam.ariaLabel = navList.classList.contains('show') ? 'Tutup menu navigasi' : 'Buka menu navigasi';
-      mainElement.classList.toggle('blurred');
-    };
-
-    btHam.addEventListener('click', (event) => {
-      toggleNavList();
-      event.stopPropagation();
-    });
-
-    navList.addEventListener('click', closeNavList);
-    mainElement.addEventListener('click', closeNavList);
 
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];

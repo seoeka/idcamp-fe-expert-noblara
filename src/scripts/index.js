@@ -4,13 +4,9 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
 import '../styles/responsive.scss';
 
-import App from './views/app';
-
 // Components
-import './component/navigation-bar';
-import './component/hero-element';
-import './component/restaurant-section';
-import './component/footer-content';
+import './component/index';
+import App from './views/app';
 
 const app = new App({
   button: document.querySelector('#hamburger'),
@@ -19,5 +15,9 @@ const app = new App({
 });
 
 window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
   app.renderPage();
 });

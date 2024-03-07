@@ -16,6 +16,7 @@ const Home = {
         <h2>Rumah Makan Kami</h2>
         <p>Nikmati sajian eksklusif Nusantara modern di seluruh Indonesia</p>
     </section>
+    <loading-circle></loading-circle>
     <section class="rest-list" id="main-content">
     </section>
       `;
@@ -36,7 +37,7 @@ const Home = {
   },
 
   handleCaption() {
-    const caption = this.querySelector('.caption');
+    const caption = document.querySelector('.hero-caption .caption');
     const windowWidth = window.innerWidth;
     if (windowWidth < 576 && caption) {
       caption.innerHTML = caption.innerHTML.replace('<br>', ' ');
