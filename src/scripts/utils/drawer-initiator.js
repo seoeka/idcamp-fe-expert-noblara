@@ -17,6 +17,7 @@ const DrawerInitiator = {
     button.innerHTML = drawer.classList.contains('show') ? 'X' : '☰';
     button.ariaLabel = drawer.classList.contains('show') ? 'Tutup menu navigasi' : 'Buka menu navigasi';
     content.classList.toggle('blurred');
+    document.querySelector('footer').classList.toggle('blurred');
   },
 
   _closeDrawer(event, drawer, button, content) {
@@ -25,6 +26,7 @@ const DrawerInitiator = {
     content.classList.remove('blurred');
     button.innerHTML = '☰';
     button.ariaLabel = 'Buka menu navigasi';
+    document.querySelector('footer').classList.remove('blurred');
   },
 };
 

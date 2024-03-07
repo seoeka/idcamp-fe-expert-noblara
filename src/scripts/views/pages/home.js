@@ -12,12 +12,13 @@ const Home = {
             <p class="caption">Eksklusif, fusion makanan Nusantara<br>dengan nuansa modern dan cita rasa istimewa</p>
         </div>
     </section>
-    <section class="rest-head">
-        <h2>Rumah Makan Kami</h2>
-        <p>Nikmati sajian eksklusif Nusantara modern di seluruh Indonesia</p>
-    </section>
-    <loading-circle></loading-circle>
-    <section class="rest-list" id="main-content">
+    <section class="rest-element">
+      <div class="rest-head">
+          <h2>Rumah Makan Kami</h2>
+          <p>Nikmati sajian eksklusif Nusantara modern di seluruh Indonesia</p>
+      </div>
+      <loading-circle></loading-circle>
+      <div class="rest-list" id="main-content"></div>
     </section>
       `;
   },
@@ -26,10 +27,10 @@ const Home = {
     this.handleCaption();
 
     const restaurantContainer = document.querySelector('.rest-list');
-    const loadingElement = document.querySelector('.loader-wrapper');
+    const loadElement = document.querySelector('.loader-wrapper');
 
     const restaurants = await RestaurantDataSource.ListRestaurant();
-    loadingElement.classList.add('display-none');
+    loadElement.classList.add('display-none');
 
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestaurantItem(restaurant);

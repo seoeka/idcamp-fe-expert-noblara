@@ -25,10 +25,12 @@ class App {
     const navList = document.querySelector('.nav-list');
     const navItems = document.querySelectorAll('.nav-item');
     const mainElement = document.querySelector('main');
+    const footer = document.querySelector('footer');
 
     const closeNavList = () => {
       navList.classList.remove('show');
       mainElement.classList.remove('blurred');
+      footer.classList.remove('blurred');
       btHam.innerHTML = '☰';
       btHam.ariaLabel = 'Buka menu navigasi';
     };

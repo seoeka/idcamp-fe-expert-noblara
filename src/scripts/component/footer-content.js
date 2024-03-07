@@ -7,12 +7,14 @@ class FooterContent extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <div class="foot-co">
-            <img src="${logo}" alt=""/>
-            <p>Copyright &copy; 2024 - Noblara by <a href="https://github.com/seoeka" target="_blank" rel="noopener noreferrer">@seoeka</a></p>
-        </div>
+        <footer>
+            <div class="foot-co">
+                <img src="${logo}" alt=""/>
+                <p>Copyright &copy; 2024 - Noblara by <a href="https://github.com/seoeka" target="_blank" rel="noopener noreferrer">@seoeka</a></p>
+            </div>
+        </footer>
         `;
   }
 }
 
-customElements.define('foot-co', FooterContent);
+customElements.define('footer-content', FooterContent);
