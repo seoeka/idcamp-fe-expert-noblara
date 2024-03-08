@@ -39,6 +39,9 @@ const CacheHelper = {
   },
 
   async _addCache(request) {
+    if (request.url.startsWith('chrome-extension://')) {
+      return;
+    }
     const cache = await this._openCache();
     cache.add(request);
   },

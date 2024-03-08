@@ -56,7 +56,9 @@ const createDetailRestaurant = (restaurant) => `
         </div>
         <div class='detail-ulasan'>
             <h2>Ulasan Pelanggan</h2>
-            
+            <div class='detail-ulasan-add'>
+                <h3>Tambah Ulasan</h3>
+            </div>
         </div>
     </div>
 
