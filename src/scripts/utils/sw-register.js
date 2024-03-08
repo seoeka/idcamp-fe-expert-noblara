@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const swRegister = async () => {
   if (!('serviceWorker' in navigator)) {
     console.log('Service Worker not supported in the browser');

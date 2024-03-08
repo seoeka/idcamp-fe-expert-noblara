@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
+/* eslint-disable no-restricted-globals */
 self.addEventListener('install', (event) => {
   console.log('Installing Service Worker ...');
 
