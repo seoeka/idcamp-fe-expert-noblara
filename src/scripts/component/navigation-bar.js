@@ -29,14 +29,21 @@ class NavigationBar extends HTMLElement {
 
   scrolled() {
     const navbar = this.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      const scrolled = window.scrollY > 80;
-      navbar.classList.toggle('scrolled', scrolled);
+    const isRestaurantPage = () => window.location.hash.startsWith('#/restaurant/');
 
-      navbar.style.backgroundColor = scrolled
-        ? 'rgba(34, 34, 34, 1)'
-        : 'rgba(34, 34, 34, 0)';
-    });
+    const setNavbarBackground = () => {
+      if (!isRestaurantPage()) {
+        const scrolled = window.scrollY > 80;
+        navbar.classList.toggle('scrolled', scrolled);
+        navbar.style.backgroundColor = scrolled ? 'rgba(34, 34, 34, 1)' : 'rgba(34, 34, 34, 0)';
+      } else {
+        navbar.style.backgroundColor = 'rgba(34, 34, 34, 1)';
+      }
+    };
+
+    window.addEventListener('scroll', setNavbarBackground);
+    window.addEventListener('load', setNavbarBackground);
+    window.addEventListener('hashchange', setNavbarBackground);
   }
 }
 

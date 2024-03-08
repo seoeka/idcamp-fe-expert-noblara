@@ -1,5 +1,5 @@
-import RestaurantDataSource from '../../data/restaurant-data';
-import createRestaurantItem from '../templates/template-creator';
+import RestaurantData from '../../data/restaurant-data';
+import { createRestaurantItem } from '../templates/template-creator';
 import hero from '../../../public/images/heros/hero-image_2.jpg';
 
 const Home = {
@@ -7,7 +7,7 @@ const Home = {
     return `
     <section class="hero-element">
         <div class="darker-img"></div>
-        <img src="${hero}" id=hero alt="" />
+        <img src='${hero}' id='hero' alt='hero-image' />
         <div class="hero-caption">
             <p class="caption">Eksklusif, fusion makanan Nusantara<br>dengan nuansa modern dan cita rasa istimewa</p>
         </div>
@@ -29,7 +29,7 @@ const Home = {
     const restaurantContainer = document.querySelector('.rest-list');
     const loadElement = document.querySelector('.loader-wrapper');
 
-    const restaurants = await RestaurantDataSource.ListRestaurant();
+    const restaurants = await RestaurantData.ListRestaurant();
     loadElement.classList.add('display-none');
 
     restaurants.forEach((restaurant) => {
