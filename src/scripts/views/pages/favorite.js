@@ -10,8 +10,8 @@ const Favorite = {
           <p>Daftar Rumah Makan Kesukaan Kamu!</p>
           <div class="divider"></div>
         </div>
-        <p id="favorite-none"></p>
         <div class='fav-rest-body'>
+            <p id="favorite-none"></p>
             <div class="rest-list"></div>
         </div>
       </section>

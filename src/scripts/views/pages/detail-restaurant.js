@@ -3,6 +3,7 @@ import UrlParser from '../../routes/url-parser';
 import { createDetailRestaurant } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import FavoriteRestaurantIdb from '../../data/restaurant-idb';
+import PostReview from '../../utils/api-handler';
 
 const DetailRestaurant = {
   async render() {
@@ -34,6 +35,12 @@ const DetailRestaurant = {
     } catch (error) {
       restaurantContainer.innerHTML = '<p id="page-none">Maaf halaman tidak bisa diakses <br/> Coba periksa koneksi Anda </p>';
     }
+
+    const submitReviewButton = document.querySelector('#submit-review');
+    submitReviewButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      PostReview();
+    });
   },
 };
 

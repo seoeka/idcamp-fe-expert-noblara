@@ -342,12 +342,16 @@ nav {
       }
     }
   }
-  .detail-body, .detail-ulasan {
+  .detail-body, .detail-review {
     display: flex;
     flex-direction: column;
     width: 100%;
     p, strong, h2 {
       color: black;
+    }
+    svg {
+      width: 40px;
+      margin-right: 10px;
     }
     strong {
       margin-top: 10px;
@@ -380,6 +384,32 @@ nav {
         }
       }
     }
+  .detail-review-container{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    .detail-review-item {
+      border: 1px solid black;
+      border-radius: 5px;
+      min-width: 200px;
+      padding: 5px 10px;
+      .review-item-head {
+        font-size: small;
+        align-items: center;
+        margin-bottom: 5px;
+        h4 {
+          color: black;
+        }
+      }
+    }
+  }
+  .form-review {
+    padding: 20px;
+    border: 1px solid black;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
   }
 }
 
@@ -421,6 +451,16 @@ nav {
   #favorite-none {
     text-align: center;
   }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
 }
 
 .divider {
