@@ -18,7 +18,7 @@ class NavigationBar extends HTMLElement {
                     <button id="hamburger" aria-label="Buka Menu" title="Menu Navigasi" alt="Menu Navigasi">☰</button>
                     <div class="nav-list" id="side-menu">
                         <a href="#/" class="nav-item">Home</a>
-                        <a href="#" class="nav-item">Favorite</a>
+                        <a href="#/favorite" class="nav-item">Favorite</a>
                         <a href="https://github.com/seoeka" class="nav-item" target="_blank" rel="noopener noreferrer">About Us</a>
                     </div>
                 </div>

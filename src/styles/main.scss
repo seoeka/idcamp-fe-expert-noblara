@@ -383,6 +383,46 @@ nav {
   }
 }
 
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.fav-rest-container {
+  padding: 0 15px;
+  min-height: 100vmin;
+  .fav-rest-head {
+    text-align: center;
+    margin-top: 100px;
+  }
+  .fav-rest-body {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 20px;
+    justify-content: center;
+  }
+  h1, p {
+    color: black;
+  }
+  #favorite-none {
+    text-align: center;
+  }
+}
+
 .divider {
   display: flex;
   width: 100%;
