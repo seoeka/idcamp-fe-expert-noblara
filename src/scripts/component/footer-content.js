@@ -1,4 +1,4 @@
-import logo from "../../public/images/logo.png";
+import logo from '../../public/images/logo.png';
 
 class FooterContent extends HTMLElement {
   connectedCallback() {
@@ -17,4 +17,4 @@ class FooterContent extends HTMLElement {
   }
 }
 
-customElements.define("footer-content", FooterContent);
+customElements.define('footer-content', FooterContent);

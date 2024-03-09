@@ -449,9 +449,17 @@ nav {
   cursor: pointer;
 }
 
+#page-none {
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 30vh;
+  padding-bottom: 70vh;
+}
+
 .fav-rest-container {
   padding: 0 15px;
-  min-height: 100vmin;
+  min-height: 100vh;
   .fav-rest-head {
     text-align: center;
     margin-top: 120px;
