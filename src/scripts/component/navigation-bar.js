@@ -8,15 +8,15 @@ class NavigationBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <nav>
-            <a href="#main-content" aria-label="Skip ke konten utama" class="skip-link">Skip ke Konten Utama</a>     
-            <div class="nav-content">
+        <nav class='flex'>
+            <a href="#main-content" aria-label="Skip ke konten utama" class="skip-link flex">Skip ke Konten Utama</a>     
+            <div class="nav-content flex">
                 <div class="nav-logo">
                     <img src="${logo}" alt="Logo Noblara" id="logo">
                 </div>
                 <div class="nav-menu">
                     <button id="hamburger" aria-label="Buka Menu" title="Menu Navigasi" alt="Menu Navigasi">☰</button>
-                    <div class="nav-list" id="side-menu">
+                    <div class="nav-list display-none col" id="side-menu">
                         <a href="#/" class="nav-item">Home</a>
                         <a href="#/favorite" class="nav-item">Favorite</a>
                         <a href="https://github.com/seoeka" class="nav-item" target="_blank" rel="noopener noreferrer">About Us</a>
@@ -30,13 +30,14 @@ class NavigationBar extends HTMLElement {
   scrolled() {
     const navbar = this.querySelector('nav');
     const isRestaurantPage = () => window.location.hash.startsWith('#/restaurant/');
+    const isFavoritePage = () => window.location.hash.startsWith('#/favorite');
 
     const setNavbarBackground = () => {
-      if (!isRestaurantPage()) {
+      if (!isRestaurantPage() && !isFavoritePage()) {
         const scrolled = window.scrollY > 80;
         navbar.classList.toggle('scrolled', scrolled);
         navbar.style.backgroundColor = scrolled ? 'rgba(34, 34, 34, 1)' : 'rgba(34, 34, 34, 0)';
-      } else {
+      } else if (isRestaurantPage() || isFavoritePage()) {
         navbar.style.backgroundColor = 'rgba(34, 34, 34, 1)';
       }
     };

@@ -5,20 +5,20 @@ import hero from '../../../public/images/heros/hero-image_2.jpg';
 const Home = {
   async render() {
     return `
-    <section class="hero-element">
+    <section class="hero-element flex">
         <div class="darker-img"></div>
         <img src='${hero}' id='hero' alt='hero-image' />
-        <div class="hero-caption">
+        <div class="hero-caption flex col">
             <p class="caption">Eksklusif, fusion makanan Nusantara<br>dengan nuansa modern dan cita rasa istimewa</p>
         </div>
     </section>
-    <section class="rest-element">
-      <div class="rest-head">
+    <section class="rest-element flex col">
+      <div class="rest-head flex col">
           <h2>Rumah Makan Kami</h2>
           <p>Nikmati sajian eksklusif Nusantara modern di seluruh Indonesia</p>
       </div>
       <loading-circle></loading-circle>
-      <div class="rest-list" id="main-content"></div>
+      <div class="rest-list grid" id="main-content"></div>
     </section>
       `;
   },

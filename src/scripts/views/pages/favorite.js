@@ -10,9 +10,9 @@ const Favorite = {
           <p>Daftar Rumah Makan Kesukaan Kamu!</p>
           <div class="divider"></div>
         </div>
-        <div class='fav-rest-body'>
+        <div class='fav-rest-body flex col'>
             <p id="favorite-none"></p>
-            <div class="rest-list"></div>
+            <div class="rest-list grid"></div>
         </div>
       </section>
       `;
