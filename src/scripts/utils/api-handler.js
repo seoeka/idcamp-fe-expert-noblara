@@ -6,7 +6,9 @@ const PostReview = async () => {
   const url = UrlParser.parseActiveUrlWithoutCombiner();
   const name = document.querySelector('#name');
   const review = document.querySelector('#review');
-  const detailReviewContainer = document.querySelector('.detail-review-container');
+  const detailReviewContainer = document.querySelector(
+    '.detail-review-container',
+  );
 
   if (name.value === '' || review.value === '') {
     alert('Nama dan ulasan tidak boleh kosong!');

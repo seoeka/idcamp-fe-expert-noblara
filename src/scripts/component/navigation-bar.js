@@ -36,7 +36,9 @@ class NavigationBar extends HTMLElement {
       if (!isRestaurantPage() && !isFavoritePage()) {
         const scrolled = window.scrollY > 80;
         navbar.classList.toggle('scrolled', scrolled);
-        navbar.style.backgroundColor = scrolled ? 'rgba(34, 34, 34, 1)' : 'rgba(34, 34, 34, 0)';
+        navbar.style.backgroundColor = scrolled
+          ? 'rgba(34, 34, 34, 1)'
+          : 'rgba(34, 34, 34, 0)';
       } else if (isRestaurantPage() || isFavoritePage()) {
         navbar.style.backgroundColor = 'rgba(34, 34, 34, 1)';
       }

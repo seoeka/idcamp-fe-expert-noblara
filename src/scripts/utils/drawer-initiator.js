@@ -15,7 +15,9 @@ const DrawerInitiator = {
     event.stopPropagation();
     drawer.classList.toggle('show');
     button.innerHTML = drawer.classList.contains('show') ? 'X' : '☰';
-    button.ariaLabel = drawer.classList.contains('show') ? 'Tutup menu navigasi' : 'Buka menu navigasi';
+    button.ariaLabel = drawer.classList.contains('show')
+      ? 'Tutup menu navigasi'
+      : 'Buka menu navigasi';
     content.classList.toggle('blurred');
     document.querySelector('footer').classList.toggle('blurred');
   },

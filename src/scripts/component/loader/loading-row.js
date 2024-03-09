@@ -16,4 +16,4 @@ class LoadingRow extends HTMLElement {
   }
 }
 
-customElements.define('loading-row', LoadingRow);
+customElements.define("loading-row", LoadingRow);

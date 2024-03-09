@@ -1,63 +1,63 @@
-@media (min-width: 576px) { 
-    .rest-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (min-width: 576px) {
+  .rest-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .detail-container .detail-body .detail-menu {
+    flex-flow: row;
+    gap: 10px;
+    .detail-menu-container {
+      width: 50%;
     }
-    .detail-container .detail-body .detail-menu {
-        flex-flow: row;
-        gap: 10px;
-        .detail-menu-container {
-            width: 50%;
-        }
-    }
-    .detail-container .detail-review .detail-review-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    } 
+  }
+  .detail-container .detail-review .detail-review-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-@media (min-width: 768px) { 
-    #hamburger {
-        display: none;
-    }
-    .nav-list{
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        height: 100%;
-        width: auto;
-        margin: 0;
-        position: relative;
-        top: 0;
-        right: 0;
-        animation: none;
-        background-color: transparent;
-    }
+@media (min-width: 768px) {
+  #hamburger {
+    display: none;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 100%;
+    width: auto;
+    margin: 0;
+    position: relative;
+    top: 0;
+    right: 0;
+    animation: none;
+    background-color: transparent;
+  }
 }
 
-@media (min-width: 992px) { 
-    .rest-list {
-        padding: 0 30px;  
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    .detail-container .detail-review .detail-review-container {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    } 
-    nav .nav-content {
-        padding: 20px 30px;
-    }
-    .detail-container {
-        padding: 40px 30px;
-    }
+@media (min-width: 992px) {
+  .rest-list {
+    padding: 0 30px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .detail-container .detail-review .detail-review-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  nav .nav-content {
+    padding: 20px 30px;
+  }
+  .detail-container {
+    padding: 40px 30px;
+  }
 }
 
-@media (min-width: 1200px) { 
-    nav .nav-content {
-        padding: 20px 100px;
-    }
-    .rest-list {
-        display: grid;
-        padding: 0 100px;  
-    }
-    .detail-container {
-        padding: 40px 100px;
-    }
+@media (min-width: 1200px) {
+  nav .nav-content {
+    padding: 20px 100px;
+  }
+  .rest-list {
+    display: grid;
+    padding: 0 100px;
+  }
+  .detail-container {
+    padding: 40px 100px;
+  }
 }

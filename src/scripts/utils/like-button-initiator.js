@@ -1,8 +1,15 @@
 /* eslint-disable no-underscore-dangle */
-import { createLikeButton, createLikedButton } from '../views/templates/template-creator';
+import {
+  createLikeButton,
+  createLikedButton,
+} from '../views/templates/template-creator';
 
 const LikeButtonPresenter = {
-  async init({ likeButtonContainer, favoriteRestaurants: FavoriteRestaurantIdb, restaurant }) {
+  async init({
+    likeButtonContainer,
+    favoriteRestaurants: FavoriteRestaurantIdb,
+    restaurant,
+  }) {
     this._likeButtonContainer = likeButtonContainer;
     this._restaurant = restaurant;
     this._favoriteRestaurants = FavoriteRestaurantIdb;

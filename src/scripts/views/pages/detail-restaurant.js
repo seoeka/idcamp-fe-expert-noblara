@@ -19,7 +19,9 @@ const DetailRestaurant = {
 
     try {
       const restaurant = await RestaurantData.DetailRestaurant(url.id);
-      restaurantContainer.innerHTML = createDetailRestaurant(restaurant.restaurant);
+      restaurantContainer.innerHTML = createDetailRestaurant(
+        restaurant.restaurant,
+      );
       LikeButtonInitiator.init({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
         favoriteRestaurants: FavoriteRestaurantIdb,

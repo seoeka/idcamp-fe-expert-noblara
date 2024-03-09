@@ -1,4 +1,4 @@
-import config from '../../globals/config';
+import config from "../../globals/config";
 
 const createRestaurantItem = (restaurant) => `
     <card-item
@@ -20,8 +20,8 @@ const createDetailRestaurant = (restaurant) => `
             <h1 class='detail-title'>${restaurant.name} <span title='Rating Rumah Makan'>( &#10029; ${restaurant.rating} / 5.0 )</span></h1>
             <p class='detail-address flex' title='Alamat Rumah Makan'><span>&#9906;&nbsp;&nbsp;</span> ${restaurant.address}, ${restaurant.city}</p>
             <p class='detail-category flex' title='Kategori Rumah Makan'><span>&#10070;&nbsp;&nbsp;</span> ${restaurant.categories
-    .map((category) => category.name)
-    .join(', ')}</p>
+              .map((category) => category.name)
+              .join(", ")}</p>
         </div>
         <div class='detail-body flex col'>
             <p><strong>Deskripsi : </strong></p>
@@ -33,22 +33,22 @@ const createDetailRestaurant = (restaurant) => `
                     <h3><span>🥗&nbsp;</span>Makanan</h3>
                     <div class='detail-menu-item'>
                         ${restaurant.menus.foods
-    .map(
-      (food) => `
+                          .map(
+                            (food) => `
                               <p class="detail-menu-name"><span>•&nbsp; </span>${food.name}</p>`,
-    )
-    .join('')}
+                          )
+                          .join("")}
                     </div>
                 </div>
                 <div class='detail-menu-container'>
                     <h3><span>🥂&nbsp;</span>Minuman</h3>
                     <div class='detail-menu-item'>
                         ${restaurant.menus.drinks
-    .map(
-      (drink) => `
+                          .map(
+                            (drink) => `
                               <p class="detail-menu-name"><span>•&nbsp; </span>${drink.name}</p>`,
-    )
-    .join('')}
+                          )
+                          .join("")}
                     </div>
                 </div>
             </div>
@@ -58,8 +58,8 @@ const createDetailRestaurant = (restaurant) => `
             <h2>Ulasan Pelanggan</h2>
             <div class='detail-review-container grid'>
                 ${restaurant.customerReviews
-    .map(
-      (review) => `
+                  .map(
+                    (review) => `
                 <div class='detail-review-item'>
                     <div class="review-item-head flex">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#9D121B" class="icons">
@@ -73,8 +73,8 @@ const createDetailRestaurant = (restaurant) => `
                     <p class="review-item-body">${review.review}</p>
                 </div>
                 `,
-    )
-    .join('')}
+                  )
+                  .join("")}
             </div>
             <form class="form-review flex col">
                 <h2>Tambah Ulasan</h2>
@@ -106,5 +106,8 @@ const createLikedButton = () => `
 `;
 
 export {
-  createRestaurantItem, createDetailRestaurant, createLikeButton, createLikedButton,
+  createRestaurantItem,
+  createDetailRestaurant,
+  createLikeButton,
+  createLikedButton,
 };

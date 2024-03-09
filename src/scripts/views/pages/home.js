@@ -1,6 +1,6 @@
-import RestaurantData from '../../data/restaurant-data';
-import { createRestaurantItem } from '../templates/template-creator';
-import hero from '../../../public/images/heros/hero-image_2.jpg';
+import RestaurantData from "../../data/restaurant-data";
+import { createRestaurantItem } from "../templates/template-creator";
+import hero from "../../../public/images/heros/hero-image_2.jpg";
 
 const Home = {
   async render() {
@@ -26,11 +26,11 @@ const Home = {
   async afterRender() {
     this.handleCaption();
 
-    const restaurantContainer = document.querySelector('.rest-list');
-    const loadElement = document.querySelector('.loader-wrapper');
+    const restaurantContainer = document.querySelector(".rest-list");
+    const loadElement = document.querySelector(".loader-wrapper");
 
     const restaurants = await RestaurantData.ListRestaurant();
-    loadElement.classList.add('display-none');
+    loadElement.classList.add("display-none");
 
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestaurantItem(restaurant);
@@ -38,13 +38,12 @@ const Home = {
   },
 
   handleCaption() {
-    const caption = document.querySelector('.hero-caption .caption');
+    const caption = document.querySelector(".hero-caption .caption");
     const windowWidth = window.innerWidth;
     if (windowWidth < 576 && caption) {
-      caption.innerHTML = caption.innerHTML.replace('<br>', ' ');
+      caption.innerHTML = caption.innerHTML.replace("<br>", " ");
     }
   },
-
 };
 
 export default Home;
