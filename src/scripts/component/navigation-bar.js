@@ -9,7 +9,6 @@ class NavigationBar extends HTMLElement {
   render() {
     this.innerHTML = `
         <nav class='flex'>
-            <a href="#main-content" aria-label="Skip ke konten utama" class="skip-link flex">Skip ke Konten Utama</a>     
             <div class="nav-content flex">
                 <div class="nav-logo">
                     <img src="${logo}" alt="Logo Noblara" id="logo">

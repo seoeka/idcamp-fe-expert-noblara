@@ -8,17 +8,15 @@
     <link rel="manifest" href="./app.webmanifest" />
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
 
-    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <title>Noblara - Noblesse Nusantara</title>
   </head>
   <body>
     <header>
+      <a href="#maincontent" aria-label="Skip ke konten utama" class="skip-link flex">Skip ke Konten Utama</a>     
       <nav-bar></nav-bar>
     </header>
-    <main>
-      <hero-element></hero-element>
-      <restaurant-section></restaurant-section>
-    </main>
+    <main id="maincontent" tabindex="0"></main>
     <footer-content></footer-content>
   </body>
 </html>

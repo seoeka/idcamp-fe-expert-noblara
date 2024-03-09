@@ -26,6 +26,8 @@ class App {
     const navItems = document.querySelectorAll('.nav-item');
     const mainElement = document.querySelector('main');
     const footer = document.querySelector('footer');
+    const skipLink = document.querySelector('.skip-link');
+    const mainContent = document.querySelector('#maincontent');
 
     const closeNavList = () => {
       navList.classList.remove('show');
@@ -51,6 +53,12 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    skipLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      mainContent.scrollIntoView({ behavior: 'smooth' });
+      skipLink.blur();
+    });
   }
 }
 

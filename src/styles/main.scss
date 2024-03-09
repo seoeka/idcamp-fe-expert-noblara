@@ -6,6 +6,7 @@ body {
   padding: 0;
   font-family: "Manrope", sans-serif;
   color: white;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -317,6 +318,7 @@ nav {
     a {
       font-weight: bold;
       color: $primary;
+      padding: 12px 0;
     }
     span {
       font-size: large;
@@ -416,16 +418,21 @@ nav {
       }
       input,
       textarea {
-        padding: 10px;
+        padding: 15px;
         border-radius: 5px;
         border: 1px solid black;
       }
       button {
         margin: 10px 0;
         background-color: $primary;
-        padding: 10px;
+        padding: 15px;
         border-radius: 5px;
         border: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: lighten($primary, 10%);
+        }
       }
     }
   }
@@ -460,6 +467,7 @@ nav {
 .fav-rest-container {
   padding: 0 15px;
   min-height: 100vh;
+  height: auto;
   .fav-rest-head {
     text-align: center;
     margin-top: 120px;
@@ -471,6 +479,7 @@ nav {
   .fav-rest-body {
     padding-top: 20px;
     align-items: center;
+    height: fit-content;
     #favorite-none {
       color: black;
     }
@@ -500,5 +509,8 @@ nav {
   }
   p > a:hover {
     color: gold;
+  }
+  a {
+    padding: 12px 0;
   }
 }

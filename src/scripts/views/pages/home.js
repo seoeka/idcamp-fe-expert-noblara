@@ -18,7 +18,7 @@ const Home = {
           <p>Nikmati sajian eksklusif Nusantara modern di seluruh Indonesia</p>
       </div>
       <loading-circle></loading-circle>
-      <div class="rest-list grid" id="main-content"></div>
+      <div class="rest-list grid"></div>
     </section>
       `;
   },
