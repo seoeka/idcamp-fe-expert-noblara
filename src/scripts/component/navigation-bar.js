@@ -11,7 +11,7 @@ class NavigationBar extends HTMLElement {
         <nav class='flex'>
             <div class="nav-content flex">
                 <div class="nav-logo">
-                    <img src="${logo}" alt="Logo Noblara" id="logo">
+                    <img data-src="${logo}" alt="Logo Noblara" id="logo" class='lazyload'>
                 </div>
                 <div class="nav-menu">
                     <button id="hamburger" aria-label="Buka Menu" title="Menu Navigasi" alt="Menu Navigasi">☰</button>

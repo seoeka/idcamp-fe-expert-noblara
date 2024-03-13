@@ -16,7 +16,7 @@ const createDetailRestaurant = (restaurant) => `
     <div class='detail-container flex col'>
         <div class='detail-head flex col'>
             <p><a href='#/'>Home</a> &nbsp;&nbsp;> &nbsp;&nbsp;Rumah Makan &nbsp;&nbsp;> &nbsp;&nbsp;<a href='#/restaurant/${restaurant.id}'>${restaurant.name}</a></p>
-            <img src='${config.BASE_IMAGE_URL + restaurant.pictureId}' alt='Gambar ${restaurant.name}'/>
+            <img data-src='${config.BASE_IMAGE_URL + restaurant.pictureId}' alt='Gambar ${restaurant.name}' class='lazyload'/>
             <h1 class='detail-title'>${restaurant.name} <span title='Rating Rumah Makan'>( &#10029; ${restaurant.rating} / 5.0 )</span></h1>
             <p class='detail-address flex' title='Alamat Rumah Makan'><span>&#9906;&nbsp;&nbsp;</span> ${restaurant.address}, ${restaurant.city}</p>
             <p class='detail-category flex' title='Kategori Rumah Makan'><span>&#10070;&nbsp;&nbsp;</span> ${restaurant.categories
@@ -66,7 +66,7 @@ const createDetailRestaurant = (restaurant) => `
                             <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
                         </svg>    
                         <div class='flex col'>
-                            <h4>${review.name}</h4>
+                            <h3>${review.name}</h3>
                             <p class="review-item-date">${review.date}</p>
                         </div>                  
                     </div>

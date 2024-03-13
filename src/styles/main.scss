@@ -27,6 +27,7 @@ a {
 }
 
 #logo {
+  width: 176px;
   height: 44px;
 }
 
@@ -130,20 +131,12 @@ nav {
   overflow: hidden;
 }
 
-.darker-img {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-}
-
 #hero {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.55);
 }
 
 .hero-caption {
@@ -362,19 +355,19 @@ nav {
     .detail-desc {
       text-align: justify;
     }
-    h2,
-    h3 {
+    h2 {
       text-align: center;
-    }
-    h3 {
-      padding: 10px 0;
-      margin-top: 20px;
-      border-radius: 5px;
-      background-color: $primary;
     }
     .detail-menu {
       margin-bottom: 40px;
       .detail-menu-container {
+        h3 {
+          text-align: center;
+          padding: 10px 0;
+          margin-top: 20px;
+          border-radius: 5px;
+          background-color: $primary;
+        }
         .detail-menu-item {
           .detail-menu-name {
             padding: 10px;
@@ -399,7 +392,7 @@ nav {
           font-size: small;
           align-items: center;
           margin-bottom: 5px;
-          h4 {
+          h3 {
             color: black;
           }
         }

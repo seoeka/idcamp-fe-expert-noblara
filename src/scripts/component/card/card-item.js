@@ -7,7 +7,7 @@ class CardItem extends HTMLElement {
     this.innerHTML = `
         <div class='rest-item'>
             <div class='rest-img flex'>
-              <img src='${this.getAttribute('image')}' alt='Gambar ${this.getAttribute('name')}'/>
+              <img data-src='${this.getAttribute('image')}' alt='Gambar ${this.getAttribute('name')}' class='lazyload'/>
               <p class='flex col'>Kota ${this.getAttribute('city')}</p>
             </div>
             <div class='rest-cont'>

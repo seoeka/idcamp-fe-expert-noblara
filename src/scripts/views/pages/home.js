@@ -1,13 +1,18 @@
 import RestaurantData from '../../data/restaurant-data';
 import { createRestaurantItem } from '../templates/template-creator';
-import hero from '../../../public/images/heros/hero-image_2.jpg';
+import HeroSmall from '../../../public/images/heros/hero-image_2-small.jpg';
+import HeroMedium from '../../../public/images/heros/hero-image_2-medium.jpg';
+import HeroLarge from '../../../public/images/heros/hero-image_2-large.jpg';
 
 const Home = {
   async render() {
     return `
     <section class="hero-element flex">
-        <div class="darker-img"></div>
-        <img src='${hero}' id='hero' alt='hero-image' />
+        <picture>
+          <source media="(max-width: 600px)" srcset="${HeroSmall}">
+          <source media="(max-width: 1280px)" srcset="${HeroMedium}">
+          <img src="${HeroLarge}" id="hero" alt="Masakan tradisional yang ada di piring">
+        </picture>
         <div class="hero-caption flex col">
             <p class="caption">Eksklusif, fusion makanan Nusantara<br>dengan nuansa modern dan cita rasa istimewa</p>
         </div>
