@@ -63,8 +63,8 @@ footer.blurred {
 #hamburger {
   position: relative;
   font-size: 24px;
-  min-width: 44px;
-  min-height: 44px;
+  width: 44px;
+  height: 44px;
   color: white;
   border: none;
   background-color: transparent;
@@ -492,13 +492,14 @@ nav {
   align-items: center;
   text-align: center;
   width: 100%;
+  height: fit-content;
   margin: auto;
   background-color: $secondary;
   padding: 20px 0 30px 0;
   gap: 10px;
   img {
-    height: 50px;
     width: 200px;
+    height: 50px;
   }
   p > a:hover {
     color: gold;
